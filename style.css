@@ -1,6 +1,9 @@
 body{
-    background-color: #FF9A8B;
-background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    background: url(background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: #FF9A8B;
+background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%); */
 
 }
 img{
@@ -15,6 +18,20 @@ img{
     width: 50vw;
     justify-content: space-evenly;
   
+}
+#container{
+    display: none;
+    height: 90vh;
+    width: 90vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: #fff; */
+    position: absolute;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); 
+    backdrop-filter: blur(5px); 
+-webkit-backdrop-filter: blur(10px); 
+
 }
 
 #user{
@@ -34,13 +51,13 @@ h2{
     display: inline-block;
     left: 15%;
 }
-#line{
+/* #line{
     position: absolute;
     width: 2px;
-    height: 100vh;
+    height: 100%;
     background-color: aqua;
     left: 50%;
-}
+} */
 #computer{
     height: 200px; 
     width: 200px;
@@ -48,13 +65,100 @@ h2{
     top: 15%;
     border-radius: 10px;
     position: absolute;
-background-color: aliceblue;
+/* background-color: aliceblue; */
     background-repeat: no-repeat;
     background-size: cover;
 }
 #score{
     position: absolute;
-    bottom: 10% ;
+    display: none;
+    top: 70% ;
     right: 25%;
     font-size: 30px;
+    
+}
+#score p{
+    color: blueviolet;
+    font-weight: 1000;
+    
+}
+#score p  span{
+     color: azure;
+}
+.score2{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.instruction{
+    height: 80vh;
+    width: 80vw;
+    background-color: blue;
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 10%;
+    transform: scale(1);
+    border-radius: 40px;
+    opacity: 1;
+    transition:opacity 1s , transform 1s, top 2s;
+}
+
+
+.instruction h1{
+    text-align: center;
+    font-size: 50px;
+    text-decoration:underline;
+}
+.instruction p{
+    font-size: 20px;
+    padding: 30px;
+
+
+}
+.hide{
+    opacity: 0;
+    height: 0vh;
+    width: 0vw;
+}
+
+
+
+/* CSS */
+#instructionButton {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#instructionButton:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+#instructionButton{
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
 }

@@ -2,11 +2,14 @@ let user=document.querySelector("#user");
 let container=document.querySelector("#container");
 console.log(container);
 let text=document.querySelector("#text");
-let option=document.querySelectorAll("span");
-
+let option=document.querySelector("#option");
+console.log(option);
+let score=document.querySelector("#score");
 let computer=document.querySelector("#computer");
 let computerScore=document.querySelector("#computerScore");
 let userScore=document.querySelector("#userScore");
+let instructionButton=document.querySelector("#instructionButton");
+let instruction=document.querySelector( ".instruction" ); 
 
 console.dir(computer)
 
@@ -27,6 +30,9 @@ const rps=[
 var initialuserScore=0;
 var initialcomputerScore=0;
   
+function show(){
+    option.style.display="flex";
+}
 
 function  select(e){
 user.style.background=rps[e].background ;
@@ -40,8 +46,11 @@ setTimeout(()=>{
        computer.style.background=rps[random].background;
        computer.style.backgroundRepeat="no-repeat";
        computer.style.backgroundSize="cover";
+       show();
        
   },2000);
+
+  option.style.display="none";
 
  let load=setInterval(() => {
         var random1=Math.floor(Math.random()*3);
@@ -68,14 +77,38 @@ setTimeout(()=>{
     userScore.innerHTML=initialuserScore;
  }, 
  2000);
-// setTimeout(() => {
-//      if(initialcomputerScore==5 || initialuserScore==5){
-//         container.style.display="none";
-//     };
-// },6000);
 
+
+result();
 
 };
+instructionButton.addEventListener("click", ()=>{
+        //   instruction.style.display="none";
+        setTimeout(() => {
+              container.style.display="inline-block";
+              score.style.display="inline-block";
+        },1000);
+          instruction.style.opacity="0";
+          instruction.style.transform="scale(0)";
+          instruction.style.top="0%";
+    
+});
+function result() {
+    setTimeout(() => {
+        
+        if( initialcomputerScore===3){
+            container.style.display="none";
+            score.classList.add('score2');
+              alert("BETTER LUCK NEXT TIME");
+        }
+        
+        else if(initialuserScore===3){
+            container.style.display="none";
+            score.classList.add('score2');
+            alert("CONGRATS,YOU WON");
+       };
+    }, 2000);
+}
 
  
 
