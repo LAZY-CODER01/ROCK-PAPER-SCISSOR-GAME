@@ -162,6 +162,16 @@ h2{
     transform: translateX(-50%);
     position: absolute;
 }
+#back{
+    top: 3%;
+    left: 1%;
+    position: absolute;
+  display: none;
+}
+
+
+
+
 @media (max-width:768px){
 
     .instruction{

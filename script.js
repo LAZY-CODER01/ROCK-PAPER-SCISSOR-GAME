@@ -10,7 +10,7 @@ let computerScore=document.querySelector("#computerScore");
 let userScore=document.querySelector("#userScore");
 let instructionButton=document.querySelector("#instructionButton");
 let instruction=document.querySelector( ".instruction" ); 
-
+let back=document.querySelector("#back");
 console.dir(computer)
 
 const rps=[
@@ -91,6 +91,7 @@ instructionButton.addEventListener("click", ()=>{
           instruction.style.opacity="0";
           instruction.style.transform="scale(0)";
           instruction.style.top="0%";
+          back.style.display= "inline-block";
     
 });
 function result() {
@@ -108,6 +109,9 @@ function result() {
             alert("CONGRATS,YOU WON");
        };
     }, 2000);
+}
+function reloadPage() {
+    location.reload();
 }
 
  
