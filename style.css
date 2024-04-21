@@ -162,3 +162,106 @@ h2{
     transform: translateX(-50%);
     position: absolute;
 }
+@media (max-width:768px){
+
+    .instruction{
+        height: 85vh;
+        width: 80vw;
+        background-color: blue;
+        position: absolute;
+        }
+        
+.instruction h1{
+    text-align: center;
+    font-size: 20px;
+    text-decoration:underline;
+}
+.instruction p{
+    font-size: 15px;
+    padding: 10px;
+
+
+}
+body{
+  background: whitesmoke;
+
+}
+#container{
+    display: none;
+    height: 90vh;
+    width: 90vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: #fff; */
+    position: absolute;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); 
+    backdrop-filter: blur(5px); 
+-webkit-backdrop-filter: blur(10px); 
+
+}
+#option{
+    position: absolute;
+    top: 60%;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  
+}
+img{
+    height: 80px;
+     width: 80px;
+     border-radius: 10px;
+}
+#user{
+    height: 100px; 
+    width: 100px;
+    left: 5%;
+    top: 20%;
+    border-radius: 10px;
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2{
+    top: 45%;
+    position: absolute;
+    display: inline-block;
+    left: 15%;
+}
+/* #line{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: aqua;
+    left: 50%;
+} */
+#computer{
+    height: 100px; 
+    width: 100px;
+    right: 5%;
+    top: 20%;
+    border-radius: 10px;
+    position: absolute;
+/* background-color: aliceblue; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#score{
+    position: absolute;
+    display: none;
+    top: 70% ;
+    right: 25%;
+    font-size: 30px;
+    
+}
+#score p{
+    color: blueviolet;
+    font-weight: 1000;
+    
+}
+#score p  span{
+     color: rgb(255, 52, 52);
+}
+}
